@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo lalal",
-    "start": "node"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
