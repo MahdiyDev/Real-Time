@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const http = require('http')
+const { v4: UUID } = require('uuid')
 const server = http.createServer(app)
 const { Server } = require('socket.io')
 const io = new Server(server)
@@ -28,8 +29,6 @@ io.on('connection', socket => {
     // })
 })
 
-const PORT = process.env.PORT || 5000
-
-server.listen(PORT, () => {
-    console.log('server listen in http://localhost:' + PORT);
+server.listen(process.env.PORT, () => {
+    console.log('server listen in http://localhost:' + process.env.PORT);
 })
